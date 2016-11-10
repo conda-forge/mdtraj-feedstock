@@ -20,6 +20,11 @@ build:
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
+  # The TNG library has a c file that declares some variables
+  # not at the top of the function :o
+  # This breaks older versions of visual studio. It could
+  # probably be fixed by an interested party.
+  skip: True # [win and (py27 or py34)]
 
 requirements:
   build:
