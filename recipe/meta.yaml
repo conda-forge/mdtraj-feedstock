@@ -1,6 +1,6 @@
 {% set name = "mdtraj" %}
-{% set version = "1.7.2" %}
-{% set sha256 = "1bc9fb06e84f6562e51e040946dae0b940eaca4760f78f3ac451f4a89b132a9a" %}
+{% set version = "1.8.0" %}
+{% set sha256 = "480fa4c280146e91db0ab7811f6fba5da29e89452b071d366a8e68247a88ffea" %}
 
 package:
   name: {{ name|lower }}
@@ -24,6 +24,7 @@ requirements:
     - setuptools
     - cython
     - numpy x.x
+    - zlib
 
   run:
     - python
@@ -57,3 +58,4 @@ about:
 extra:
   recipe-maintainers:
     - rmcgibbo
+    - mpharrigan
