@@ -24,7 +24,7 @@ build:
   # not at the top of the function :o
   # This breaks older versions of visual studio. It could
   # probably be fixed by an interested party.
-  skip: True # [win and (py27 or py34)]
+  skip: True  # [win and (py27 or py34)]
 
 requirements:
   build:
