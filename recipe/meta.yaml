@@ -1,6 +1,6 @@
 {% set name = "mdtraj" %}
-{% set version = "1.7.2" %}
-{% set sha256 = "1bc9fb06e84f6562e51e040946dae0b940eaca4760f78f3ac451f4a89b132a9a" %}
+{% set version = "1.8.0" %}
+{% set sha256 = "480fa4c280146e91db0ab7811f6fba5da29e89452b071d366a8e68247a88ffea" %}
 
 package:
   name: {{ name|lower }}
@@ -10,6 +10,9 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # Necessary for building 1.8.0, should be fixed by next version
+    - 1208-find-zlib.patch
 
 build:
   number: 0
@@ -17,6 +20,11 @@ build:
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
+  # The TNG library has a c file that declares some variables
+  # not at the top of the function :o
+  # This breaks older versions of visual studio. It could
+  # probably be fixed by an interested party.
+  skip: True  # [win and (py27 or py34)]
 
 requirements:
   build:
@@ -24,6 +32,7 @@ requirements:
     - setuptools
     - cython
     - numpy x.x
+    - zlib
 
   run:
     - python
@@ -57,3 +66,4 @@ about:
 extra:
   recipe-maintainers:
     - rmcgibbo
+    - mpharrigan
