@@ -28,7 +28,7 @@ requirements:
     - cython
     - numpy x.x
     - zlib 1.2.*
-    - msinttypes # [win and py27]
+    - msinttypes  # [win and py27]
 
   run:
     - python
