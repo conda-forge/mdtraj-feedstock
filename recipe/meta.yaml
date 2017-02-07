@@ -13,9 +13,8 @@ source:
   patches:
     # Necessary for building 1.8.0, should be fixed by next version
     - 1208-find-zlib.patch
-    - tngio.patch
-
-
+    - declare_init_order.patch #  [py27 and win]
+    - math.patch #  [py27 and win]
 build:
   number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
