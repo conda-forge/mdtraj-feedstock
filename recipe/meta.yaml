@@ -13,18 +13,14 @@ source:
   patches:
     # Necessary for building 1.8.0, should be fixed by next version
     - 1208-find-zlib.patch
-
+    - declare_init_order.patch #  [py27 and win]
+    - math.patch #  [py27 and win]
 build:
   number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
-  # The TNG library has a c file that declares some variables
-  # not at the top of the function :o
-  # This breaks older versions of visual studio. It could
-  # probably be fixed by an interested party.
-  skip: True  # [win and (py27 or py34)]
 
 requirements:
   build:
@@ -33,6 +29,7 @@ requirements:
     - cython
     - numpy x.x
     - zlib 1.2.*
+    - msinttypes  # [win and py27]
 
   run:
     - python
