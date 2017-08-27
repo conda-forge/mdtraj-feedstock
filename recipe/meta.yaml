@@ -27,14 +27,16 @@ requirements:
     - python
     - setuptools
     - cython
-    - numpy x.x
+    - numpy 1.8.*  # [not (win and py36)]
+    - numpy 1.11.*  # [win and py36]
     - zlib 1.2.*
     - msinttypes  # [win and py27]
 
   run:
     - python
     - setuptools
-    - numpy x.x
+    - numpy >=1.8  # [not (win and py36)]
+    - numpy >=1.11  # [win and py36]
     - scipy
     - pandas
     - pytables
