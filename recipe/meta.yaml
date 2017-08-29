@@ -16,7 +16,7 @@ source:
     - declare_init_order.patch  # [py27 and win]
     - math.patch  # [py27 and win]
 build:
-  number: 1
+  number: 2
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -27,14 +27,18 @@ requirements:
     - python
     - setuptools
     - cython
-    - numpy x.x
-    - zlib 1.2.*
+    - numpy 1.8.*  # [not (win and (py35 or py36))]
+    - numpy 1.9.*  # [win and py35]
+    - numpy 1.11.*  # [win and py36]
+    - zlib 1.2.8
     - msinttypes  # [win and py27]
 
   run:
     - python
     - setuptools
-    - numpy x.x
+    - numpy >=1.8  # [not (win and (py35 or py36))]
+    - numpy >=1.9  # [win and py35]
+    - numpy >=1.11  # [win and py36]
     - scipy
     - pandas
     - pytables
