@@ -1,6 +1,6 @@
 {% set name = "mdtraj" %}
-{% set version = "1.8.0" %}
-{% set sha256 = "480fa4c280146e91db0ab7811f6fba5da29e89452b071d366a8e68247a88ffea" %}
+{% set version = "1.9.1" %}
+{% set sha256 = "ca1ae07c5f5ce59940a48388ac9b098f8e22743b5f3ed3f46d5e3d1317b06282" %}
 
 package:
   name: {{ name|lower }}
@@ -10,13 +10,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    # Necessary for building 1.8.0, should be fixed by next version
-    - 1208-find-zlib.patch
-    - declare_init_order.patch  # [py27 and win]
-    - math.patch  # [py27 and win]
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
