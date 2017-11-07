@@ -7,11 +7,10 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -25,7 +24,7 @@ requirements:
     - numpy 1.8.*  # [not (win and (py35 or py36))]
     - numpy 1.9.*  # [win and py35]
     - numpy 1.11.*  # [win and py36]
-    - zlib 1.2.8
+    - zlib 1.2.11
     - msinttypes  # [win and py27]
 
   run:
@@ -37,6 +36,7 @@ requirements:
     - scipy
     - pandas
     - pytables
+    - zlib 1.2.11
 
 test:
   imports:
@@ -44,6 +44,8 @@ test:
   commands:
     - mdconvert -h
     - mdinspect -h
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/mdtraj/mdtraj
