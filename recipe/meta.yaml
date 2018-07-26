@@ -10,7 +10,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 build:
-  number: 1
+  number: 2
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -18,25 +18,28 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - setuptools
     - cython
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
-    - zlib 1.2.11
+    - numpy        # [not (win and (py35 or py36))]
+    - numpy        # [win and py35]
+    - numpy         # [win and py36]
+    - zlib
     - msinttypes  # [win and py27]
 
   run:
     - python
     - setuptools
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}   # [not (win and (py35 or py36))]
+    - {{ pin_compatible('numpy') }}   # [win and py35]
+    - {{ pin_compatible('numpy') }}   # [win and py36]
     - scipy
     - pandas
     - pytables
-    - zlib 1.2.11
+    - zlib
 
 test:
   imports:
