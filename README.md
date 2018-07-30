@@ -20,14 +20,16 @@ binpos, AMBER NetCDF, AMBER mdcrd, TINKER arc and MDTraj HDF5.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mdtraj-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mdtraj-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/mdtraj-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mdtraj-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/mdtraj-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/mdtraj-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/mdtraj-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/mdtraj-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/mdtraj-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/mdtraj-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/mdtraj-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/mdtraj-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mdtraj/badges/version.svg)](https://anaconda.org/conda-forge/mdtraj)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mdtraj/badges/downloads.svg)](https://anaconda.org/conda-forge/mdtraj)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mdtraj-green.svg)](https://anaconda.org/conda-forge/mdtraj) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mdtraj.svg)](https://anaconda.org/conda-forge/mdtraj) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mdtraj.svg)](https://anaconda.org/conda-forge/mdtraj) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mdtraj.svg)](https://anaconda.org/conda-forge/mdtraj) |
 
 Installing mdtraj
 =================
