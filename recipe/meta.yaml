@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 build:
   number: 2
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .  --verbose
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
@@ -20,6 +20,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - pip
   host:
     - python
     - setuptools
