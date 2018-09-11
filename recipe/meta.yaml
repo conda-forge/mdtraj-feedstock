@@ -25,7 +25,7 @@ requirements:
     - pip
     - setuptools
     - cython
-    - numpy =1.8
+    - numpy
     - zlib
     - msinttypes  # [win and py27]
 
