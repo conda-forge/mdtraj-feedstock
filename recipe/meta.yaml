@@ -1,13 +1,14 @@
 {% set name = "mdtraj" %}
 {% set version = "1.9.2" %}
-{% set sha256 = "9a77cdf080e5c000c493f625a4a1c140d1c0b3ae1fd0299fa3204209befc5c18" %}
+{% set sha256 = "cdd926f19c007955f0f768d36d696f3e77b4c8030289a2b40eb97a91cebacd0f" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/mdtraj/mdtraj/archive/{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 build:
   number: 0
