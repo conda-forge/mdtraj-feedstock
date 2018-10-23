@@ -16,6 +16,7 @@ build:
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
+  skip: True  # [py37]
 
 requirements:
   build:
