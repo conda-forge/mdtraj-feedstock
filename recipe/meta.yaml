@@ -13,6 +13,7 @@ source:
   patches:
     - fix_py37.patch
     - 192_unlock_compiler_darwin.patch
+    - 192_rm_drid_cpp.patch
 
 build:
   number: 1000
