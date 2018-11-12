@@ -12,6 +12,7 @@ source:
   sha256: {{ sha256 }}
   patches:
     - fix_py37.patch
+    - 192_unlock_compiler_darwin.patch
 
 build:
   number: 1000
