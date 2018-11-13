@@ -10,8 +10,13 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - fix_py37.patch
+    - 192_unlock_compiler_darwin.patch
+    - 192_rm_drid_cpp.patch
+
 build:
-  number: 0
+  number: 1000
   script: python -m pip install --no-deps --ignore-installed .  --verbose
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
