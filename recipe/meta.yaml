@@ -11,9 +11,9 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - fix_py37.patch
-    - 192_unlock_compiler_darwin.patch
-    - 192_rm_drid_cpp.patch
+    #- fix_py37.patch
+    #- 192_unlock_compiler_darwin.patch
+    #- 192_rm_drid_cpp.patch
 
 build:
   number: 0
