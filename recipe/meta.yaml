@@ -1,23 +1,16 @@
-{% set name = "mdtraj" %}
 {% set version = "1.9.3" %}
-{% set sha256 = "5d95e045b1dd093a26bf6fea9895c3c6b52955d8f7fceee867a519ccf29640b3" %}
 
 package:
-  name: {{ name|lower }}
+  name: mdtraj
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-  patches:
-    #- fix_py37.patch
-    #- 192_unlock_compiler_darwin.patch
-    #- 192_rm_drid_cpp.patch
+  url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
+  sha256: 5d95e045b1dd093a26bf6fea9895c3c6b52955d8f7fceee867a519ccf29640b3
 
 build:
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .  --verbose
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
@@ -29,12 +22,10 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
     - cython
     - numpy
     - zlib
     - msinttypes  # [win and py27]
-
   run:
     - python
     - setuptools
@@ -50,12 +41,11 @@ test:
   commands:
     - mdconvert -h
     - mdinspect -h
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/mdtraj/mdtraj
   license: LGPL-2.1
+  license_file: LICENSE
   summary: "A modern, open library for the analysis of molecular dynamics trajectories"
   description: |
     MDTraj is a python library that allows users to manipulate molecular dynamics
