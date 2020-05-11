@@ -1,4 +1,4 @@
-{% set version = "1.9.3" %}
+{% set version = "1.9.4" %}
 
 package:
   name: mdtraj
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: 5d95e045b1dd093a26bf6fea9895c3c6b52955d8f7fceee867a519ccf29640b3
+  sha256: d5d28be24dd5f38e8b272c3a445a6cdbffc374b30e891c5535f65bb20f7e8b24
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
@@ -46,7 +46,7 @@ about:
   home: https://github.com/mdtraj/mdtraj
   license: LGPL-2.1
   license_file: LICENSE
-  summary: "A modern, open library for the analysis of molecular dynamics trajectories"
+  summary: A modern, open library for the analysis of molecular dynamics trajectories
   description: |
     MDTraj is a python library that allows users to manipulate molecular dynamics
     (MD) trajectories and perform a variety of analyses, including fast RMSD,
