@@ -34,7 +34,7 @@ requirements:
     - pandas
     - pyparsing
     - pytables
-    - astor
+    - astunparse
     - snappy
     - zlib
 
