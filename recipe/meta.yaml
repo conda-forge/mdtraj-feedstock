@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://github.com/mdtraj/mdtraj
-  license: LGPL-2.1
+  license: LGPL-2.1-or-later
   license_file: LICENSE
   summary: A modern, open library for the analysis of molecular dynamics trajectories
   description: |
