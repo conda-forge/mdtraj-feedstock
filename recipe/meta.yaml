@@ -35,8 +35,7 @@ requirements:
     - pandas
     - pyparsing
     - pytables
-    - astunparse <=1.6.2  # [py==38]
-    - astunparse  # [py!=38]
+    - astunparse
     - snappy
     - zlib
 
