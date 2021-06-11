@@ -63,7 +63,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - rmcgibbo
-    - mpharrigan
     - marscher
     - mattwthompson
+    - sroet
