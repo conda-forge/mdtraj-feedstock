@@ -1,4 +1,4 @@
-{% set version = "1.9.5" %}
+{% set version = "1.9.6" %}
 
 package:
   name: mdtraj
@@ -6,15 +6,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: f22c28c9dd51aa0f8692078dd3c2c7a338a7ca27cbd9aaeb669a60361e95adc4
+  sha256: 5b7c9b98dd0a1c1a2ddd6c1690fba6096a63314da2e79e05a8a1402b8949ad3c
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
-  skip: True         # [python_impl == 'pypy']
+  skip: true  # [python_impl == 'pypy']
 
 requirements:
   build:
