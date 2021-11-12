@@ -8,7 +8,7 @@ source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
   sha256: 8a3309d2ef6ddb1023dcf48300d5df9b190469b63f69af9d55490bc4799d3757
   patches:
-    - arm_compile.patch
+    - 0001-Fix-compilation-error-on-conda-build-osx-arm64-image.patch
 
 build:
   number: 0
