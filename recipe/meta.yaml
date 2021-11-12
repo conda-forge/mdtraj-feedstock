@@ -1,4 +1,4 @@
-{% set version = "1.9.6" %}
+{% set version = "1.9.7" %}
 
 package:
   name: mdtraj
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: 5b7c9b98dd0a1c1a2ddd6c1690fba6096a63314da2e79e05a8a1402b8949ad3c
+  sha256: 8a3309d2ef6ddb1023dcf48300d5df9b190469b63f69af9d55490bc4799d3757
 
 build:
   number: 1
