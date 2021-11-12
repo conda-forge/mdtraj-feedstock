@@ -21,14 +21,14 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python >=3.6
+    - python
     - pip
     - cython
     - numpy
     - zlib
-    - msinttypes  # [win]
+    - msinttypes  # [win and py==27]
   run:
-    - python >=3.6
+    - python
     - setuptools
     - {{ pin_compatible('numpy') }}
     - scipy
