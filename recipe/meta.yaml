@@ -45,7 +45,7 @@ requirements:
     - snappy
     - zlib
   run_constrained:
-    - openmm >= 7.6
+    - openmm >=7.6
 
 test:
   imports:
