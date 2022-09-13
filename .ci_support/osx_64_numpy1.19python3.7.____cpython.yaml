@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '11'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,11 +11,11 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '11'
+- '14'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.21'
+- '1.19'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -23,7 +23,7 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.7.* *_cpython
 python_impl:
 - cpython
 target_platform:
