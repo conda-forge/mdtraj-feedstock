@@ -9,6 +9,7 @@ source:
   sha256: 8a3309d2ef6ddb1023dcf48300d5df9b190469b63f69af9d55490bc4799d3757
   patches:
     - 0001-Fix-compilation-error-on-conda-build-osx-arm64-image.patch
+    - 0002-Force-recythonization.patch
 
 build:
   number: 3
