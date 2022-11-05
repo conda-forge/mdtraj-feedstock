@@ -33,7 +33,6 @@ requirements:
     - cython
     - numpy
     - zlib
-    - msinttypes  # [win and py==27]
   run:
     - python
     - setuptools
