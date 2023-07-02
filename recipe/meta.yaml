@@ -1,4 +1,4 @@
-{% set version = "1.9.7" %}
+{% set version = "1.9.8" %}
 
 package:
   name: mdtraj
@@ -6,13 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: 8a3309d2ef6ddb1023dcf48300d5df9b190469b63f69af9d55490bc4799d3757
-  patches:
-    - 0001-Fix-compilation-error-on-conda-build-osx-arm64-image.patch
-    - 0002-Force-recythonization.patch
+  sha256: a886c497b0e1868c07d95da29a754ed41b3413000a0f21c616b7b9201ba862cb
 
 build:
-  number: 4
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -44,6 +41,8 @@ requirements:
     - astunparse
     - snappy
     - zlib
+  run_constrained:
+    - gsd =2
 
 test:
   imports:
