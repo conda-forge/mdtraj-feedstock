@@ -9,7 +9,7 @@ source:
   sha256: a886c497b0e1868c07d95da29a754ed41b3413000a0f21c616b7b9201ba862cb
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -42,7 +42,8 @@ requirements:
     - snappy
     - zlib
   run_constrained:
-    - gsd =2
+    # https://github.com/MDAnalysis/mdanalysis/issues/4172; 2.x and 3.0.1 seem fine
+    - gsd !=3.0.0
 
 test:
   imports:
