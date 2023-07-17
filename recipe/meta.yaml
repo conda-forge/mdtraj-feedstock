@@ -20,14 +20,14 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython =2                              # [build_platform != target_platform]
+    - cython =0.29                           # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - cython =2
+    - cython =0.29
     - numpy
     - zlib
   run:
