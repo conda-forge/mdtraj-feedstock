@@ -9,7 +9,7 @@ source:
   sha256: a886c497b0e1868c07d95da29a754ed41b3413000a0f21c616b7b9201ba862cb
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -20,14 +20,14 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython =2                              # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - cython
+    - cython =2
     - numpy
     - zlib
   run:
