@@ -9,7 +9,7 @@ source:
   sha256: 1b03f7ac753af5ca07cf874842689c8d49e791ee1242510875581df6100ca15e
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
