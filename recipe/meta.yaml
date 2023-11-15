@@ -15,7 +15,7 @@ build:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
   # https://github.com/conda-forge/mdtraj-feedstock/pull/51#issuecomment-1760347015
-  skip: true  # [osx and py==312 or python_impl == 'pypy']
+  skip: true  # [osx or python_impl == 'pypy']
 
 
 requirements:
