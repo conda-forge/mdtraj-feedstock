@@ -25,14 +25,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/mdtraj-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/mdtraj-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -78,41 +71,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=620&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mdtraj-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_numpy1.26python3.12.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_numpy1.22python3.10.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=620&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mdtraj-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.22python3.10.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_numpy1.22python3.8.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=620&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mdtraj-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.22python3.8.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_numpy1.22python3.9.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=620&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mdtraj-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.22python3.9.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_numpy1.23python3.11.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=620&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mdtraj-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.23python3.11.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_numpy1.26python3.12.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=620&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mdtraj-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.26python3.12.____cpythonpython_implcpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
