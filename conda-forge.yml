@@ -9,4 +9,4 @@ github:
 provider:
   win: azure
 test_on_native_only: true
-provider: {linux_aarch64: default}
+provider: {linux_aarch64: azure}
