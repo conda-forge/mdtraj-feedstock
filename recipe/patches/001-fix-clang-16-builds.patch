@@ -1,0 +1,12 @@
+diff --git a/basesetup.py b/basesetup.py
+--- a/basesetup.py	(revision 43d8194bbc2e7f97a74b69fa02708bf17589529e)
++++ b/basesetup.py	(date 1714337816106)
+@@ -61,7 +61,7 @@
+              self.compiler_args_sse2 = []
+         self.compiler_args_sse3 = ['-mssse3'] if (self.sse3_enabled and not self.msvc) else []
+         self.compiler_args_neon = []
+-        self.compiler_args_warn = ['-Wno-unused-function', '-Wno-unreachable-code', '-Wno-sign-compare'] if not self.msvc else []
++        self.compiler_args_warn = ['-Wno-unused-function', '-Wno-unreachable-code', '-Wno-sign-compare', '-Wno-error=incompatible-function-pointer-types'] if not self.msvc else []
+ 
+         if self.neon_enabled:
+             self.compiler_args_sse2 = []
