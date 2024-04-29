@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
   sha256: 1b03f7ac753af5ca07cf874842689c8d49e791ee1242510875581df6100ca15e
+  patches:
+    - patches/001-fix-clang-16-builds.patch  # [osx]
 
 build:
   number: 1
@@ -15,7 +17,7 @@ build:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
     - mdinspect = mdtraj.scripts.mdinspect:entry_point
   # https://github.com/conda-forge/mdtraj-feedstock/pull/51#issuecomment-1760347015
-  skip: true  # [osx or python_impl == 'pypy']
+  skip: true  # [python_impl == 'pypy']
 
 
 requirements:
