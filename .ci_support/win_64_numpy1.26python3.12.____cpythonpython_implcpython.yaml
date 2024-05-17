@@ -1,11 +1,9 @@
 c_compiler:
 - vs2019
-c_stdlib:
-- vs
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge mdtraj_rc
 cxx_compiler:
 - vs2019
 numpy:
