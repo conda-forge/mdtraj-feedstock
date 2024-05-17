@@ -30,7 +30,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
-    - python >=3.10,<=3.12
+    - python
     - pip
     - cython =0.29
     - numpy
