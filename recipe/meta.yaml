@@ -1,4 +1,4 @@
-{% set version = "1.9.9" %}
+{% set version = "1.10.0rc1" %}
 
 package:
   name: mdtraj
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: 1b03f7ac753af5ca07cf874842689c8d49e791ee1242510875581df6100ca15e
+  sha256: aa17c098cee7e6d5a1cd89324f74820e04417dc94eb37018bfdc7cfbac2bdb48
   patches:
     - patches/001-fix-clang-16-builds.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -29,7 +29,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python
+    - python >=3.10,<=3.12
     - pip
     - cython =0.29
     - numpy
