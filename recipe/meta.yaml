@@ -1,4 +1,4 @@
-{% set version = "1.10.0rc1" %}
+{% set version = "1.10.0rc2" %}
 
 package:
   name: mdtraj
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: aa17c098cee7e6d5a1cd89324f74820e04417dc94eb37018bfdc7cfbac2bdb48
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
   patches:
     - patches/mdinspect_six.patch
 
@@ -38,6 +38,7 @@ requirements:
   run:
     - python
     - setuptools
+    - packaging
     - {{ pin_compatible('numpy') }}
     - scipy
     - pandas
