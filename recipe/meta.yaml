@@ -1,4 +1,4 @@
-{% set version = "1.10.0rc2" %}
+{% set version = "1.10.0" %}
 
 package:
   name: mdtraj
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: 86ff2073025743cc841e3a0f457e3931ea40f6359d8ce5600d9d46baa83e2885
+  sha256: 7d518b5a53b498f52686567e0191e9ee41a725b3296a8dbcac24fe824ed4af8f
   patches:
     - patches/mdinspect_six.patch
 
