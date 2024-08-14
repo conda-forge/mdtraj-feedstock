@@ -11,7 +11,7 @@ source:
     - patches/mdinspect_six.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -39,7 +39,6 @@ requirements:
     - python
     - setuptools
     - packaging
-    - {{ pin_compatible('numpy') }}
     - scipy
     - pandas
     - pyparsing
