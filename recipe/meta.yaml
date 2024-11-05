@@ -7,8 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
   sha256: 2e427d007194a64cf2ac92e1e10572d975ba914ab63e315b747738d71cf148da
-  patches:
-    - patches/mdinspect_six.patch
+  #patches:
+  #  - patches/mdinspect_six.patch
 
 build:
   number: 0
