@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
   sha256: 2e427d007194a64cf2ac92e1e10572d975ba914ab63e315b747738d71cf148da
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
