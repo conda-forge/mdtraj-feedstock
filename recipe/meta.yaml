@@ -24,10 +24,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - versioneer-518
+    - versioneer
   host:
     - python
     - pip
+    - versioneer
     - cython =3
     - numpy
     - zlib
