@@ -37,7 +37,7 @@ requirements:
     - python
     - setuptools
     - packaging
-    - numpy <2.0.0a0
+    - numpy
     - scipy
     - pandas
     - pyparsing
