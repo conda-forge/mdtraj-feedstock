@@ -9,7 +9,7 @@ source:
   sha256: 2e427d007194a64cf2ac92e1e10572d975ba914ab63e315b747738d71cf148da
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -37,6 +37,7 @@ requirements:
     - python
     - setuptools
     - packaging
+    - numpy <2.0.0a0
     - scipy
     - pandas
     - pyparsing
