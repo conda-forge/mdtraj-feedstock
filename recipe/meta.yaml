@@ -37,6 +37,7 @@ requirements:
     - python
     - setuptools
     - packaging
+    - {{ pin_compatible('numpy') }}
     - scipy
     - pandas
     - pyparsing
