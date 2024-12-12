@@ -1,4 +1,4 @@
-{% set version = "1.10.1" %}
+{% set version = "1.10.2" %}
 
 package:
   name: mdtraj
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: 2e427d007194a64cf2ac92e1e10572d975ba914ab63e315b747738d71cf148da
+  sha256: 8108bd42792b653f96c9352956f1100ccebbe21b0fe598b05a7a85c39704136f
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -37,7 +37,7 @@ requirements:
     - python
     - setuptools
     - packaging
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.25.0
     - scipy
     - pandas
     - pyparsing
