@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/mdtraj/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 257b6a0948f2d2bf12c9841805501f3f1cf00f3519c1890cab959025bfd9c8ad
+  url: https://pypi.org/packages/source/m/mdtraj/{{ name }}-{{ version }}.tar.gz
+  sha256: d14a35009263725b784c436a8ac63fb6ceeb2bb366a526715dac6590d21025e5
 
 build:
   number: 0
