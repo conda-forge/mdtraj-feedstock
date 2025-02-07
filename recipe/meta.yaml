@@ -6,9 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/mdtraj/{{ name }}.git
-  git_rev: {{ version }}
-  git_depth: -1
+  url: https://github.com/mdtraj/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 257b6a0948f2d2bf12c9841805501f3f1cf00f3519c1890cab959025bfd9c8ad
 
 build:
   number: 0
