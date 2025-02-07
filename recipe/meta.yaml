@@ -39,7 +39,7 @@ requirements:
     - python
     - setuptools
     - packaging
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.25.0
     - scipy
     - pandas
     - pyparsing
