@@ -20,7 +20,6 @@ is the wide variety of molecular dynamics trajectory file formats which are
 supported, including RCSB pdb, GROMACS xtc, tng, and trr, CHARMM / NAMD dcd, AMBER
 binpos, AMBER NetCDF, AMBER mdcrd, TINKER arc and MDTraj HDF5.
 
-
 Current build status
 ====================
 
