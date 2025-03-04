@@ -23,13 +23,10 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: cython =3
-    - if: build_platform != target_platform
-      then: numpy
+        - python
+        - cross-python_${{ target_platform }}
+        - cython =3
+        - numpy
     - ${{ compiler('c') }}
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
@@ -53,6 +50,7 @@ requirements:
     - pytables
     - snappy
     - zlib
+    - netCDF4
   run_constraints:
     - gsd !=3.0.0
 
