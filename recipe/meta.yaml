@@ -10,7 +10,7 @@ source:
   sha256: d14a35009263725b784c436a8ac63fb6ceeb2bb366a526715dac6590d21025e5
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - mdconvert = mdtraj.scripts.mdconvert:entry_point
@@ -45,6 +45,7 @@ requirements:
     - pytables
     - snappy
     - zlib
+    - netCDF4
   run_constrained:
     # https://github.com/MDAnalysis/mdanalysis/issues/4172; 2.x and 3.0.1 seem fine
     - gsd !=3.0.0
