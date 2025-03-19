@@ -51,7 +51,6 @@ requirements:
     - pytables
     - snappy
     - zlib
-    - netCDF4
   run_constraints:
     - gsd !=3.0.0
 
