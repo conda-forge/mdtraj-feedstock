@@ -4,7 +4,7 @@
 
 [project]
 name = "mdtraj-feedstock"
-version = "3.46.1"
+version = "3.47.0"
 description = "Pixi configuration for conda-forge/mdtraj-feedstock"
 authors = ["@conda-forge/mdtraj"]
 channels = ["conda-forge"]
