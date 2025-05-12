@@ -1,12 +1,13 @@
-{% set version = "1.10.2" %}
+{% set name = "mdtraj" %}
+{% set version = "1.10.3" %}
 
 package:
   name: mdtraj
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/m/mdtraj/mdtraj-{{ version }}.tar.gz
-  sha256: 8108bd42792b653f96c9352956f1100ccebbe21b0fe598b05a7a85c39704136f
+  url: https://pypi.org/packages/source/m/mdtraj/{{ name }}-{{ version }}.tar.gz
+  sha256: d14a35009263725b784c436a8ac63fb6ceeb2bb366a526715dac6590d21025e5
 
 build:
   number: 0
