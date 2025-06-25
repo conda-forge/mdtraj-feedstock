@@ -17,11 +17,26 @@ jobs:
       win_64_numpy2.0python3.12.____cpython:
         CONFIG: win_64_numpy2.0python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
+      win_64_numpy2.0python3.13.____cp313:
+        CONFIG: win_64_numpy2.0python3.13.____cp313
+        UPLOAD_PACKAGES: 'True'
       win_64_numpy2.0python3.9.____cpython:
         CONFIG: win_64_numpy2.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+      win_64_numpy2python3.10.____cpython:
+        CONFIG: win_64_numpy2python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_numpy2python3.11.____cpython:
+        CONFIG: win_64_numpy2python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_numpy2python3.12.____cpython:
+        CONFIG: win_64_numpy2python3.12.____cpython
+        UPLOAD_PACKAGES: 'True'
       win_64_numpy2python3.13.____cp313:
         CONFIG: win_64_numpy2python3.13.____cp313
+        UPLOAD_PACKAGES: 'True'
+      win_64_numpy2python3.9.____cpython:
+        CONFIG: win_64_numpy2python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
