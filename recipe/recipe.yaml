@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: mdtraj
   version: 1.11.0
+  python_min: "3.11"
 
 package:
   name: mdtraj
