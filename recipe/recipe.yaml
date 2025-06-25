@@ -10,8 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mdtraj/${{ name }}-${{ version }}.tar.gz
-  sha256: d14a35009263725b784c436a8ac63fb6ceeb2bb366a526715dac6590d21025e5
-
+  sha256: 2cf0ed2ee9a603dc4599743b1806e1387c655e2a1e9d013841b99fb137ad852e
 build:
   number: 0
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
