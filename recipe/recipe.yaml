@@ -24,7 +24,7 @@ requirements:
   build:
     - if: build_platform != target_platform
       then:
-        - python
+        - python       ${{ python_min }}.*
         - cross-python_${{ target_platform }}
         - cython =3
         - numpy
@@ -33,7 +33,7 @@ requirements:
     - ${{ stdlib("c") }}
     - versioneer
   host:
-    - python
+    - python ${{ python_min }}.*
     - pip
     - setuptools
     - versioneer
@@ -41,10 +41,10 @@ requirements:
     - numpy
     - zlib
   run:
-    - python
+    - python >=${{ python_min }}
     - setuptools
     - packaging
-    - numpy >=1.25.0
+    - numpy >=1.25.0,<3
     - scipy
     - pandas
     - pyparsing
