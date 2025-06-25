@@ -25,54 +25,30 @@ description = "List contents of all packages found in rattler-build build direct
 [tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build mdtraj-feedstock directly (without setup scripts), no particular variant specified"
-[tasks."build-linux_64_numpy2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_numpy2.yaml"
-description = "Build mdtraj-feedstock with variant linux_64_numpy2 directly (without setup scripts)"
-[tasks."inspect-linux_64_numpy2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_numpy2.yaml"
-description = "List contents of mdtraj-feedstock packages built for variant linux_64_numpy2"
-[tasks."build-linux_64_numpy2.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_numpy2.0.yaml"
-description = "Build mdtraj-feedstock with variant linux_64_numpy2.0 directly (without setup scripts)"
-[tasks."inspect-linux_64_numpy2.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_numpy2.0.yaml"
-description = "List contents of mdtraj-feedstock packages built for variant linux_64_numpy2.0"
-[tasks."build-osx_64_numpy2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_numpy2.yaml"
-description = "Build mdtraj-feedstock with variant osx_64_numpy2 directly (without setup scripts)"
-[tasks."inspect-osx_64_numpy2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_numpy2.yaml"
-description = "List contents of mdtraj-feedstock packages built for variant osx_64_numpy2"
-[tasks."build-osx_64_numpy2.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_numpy2.0.yaml"
-description = "Build mdtraj-feedstock with variant osx_64_numpy2.0 directly (without setup scripts)"
-[tasks."inspect-osx_64_numpy2.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_numpy2.0.yaml"
-description = "List contents of mdtraj-feedstock packages built for variant osx_64_numpy2.0"
-[tasks."build-osx_arm64_numpy2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_numpy2.yaml"
-description = "Build mdtraj-feedstock with variant osx_arm64_numpy2 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_numpy2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_numpy2.yaml"
-description = "List contents of mdtraj-feedstock packages built for variant osx_arm64_numpy2"
-[tasks."build-osx_arm64_numpy2.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_numpy2.0.yaml"
-description = "Build mdtraj-feedstock with variant osx_arm64_numpy2.0 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_numpy2.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_numpy2.0.yaml"
-description = "List contents of mdtraj-feedstock packages built for variant osx_arm64_numpy2.0"
-[tasks."build-win_64_numpy2"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_numpy2.yaml"
-description = "Build mdtraj-feedstock with variant win_64_numpy2 directly (without setup scripts)"
-[tasks."inspect-win_64_numpy2"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_numpy2.yaml"
-description = "List contents of mdtraj-feedstock packages built for variant win_64_numpy2"
-[tasks."build-win_64_numpy2.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_numpy2.0.yaml"
-description = "Build mdtraj-feedstock with variant win_64_numpy2.0 directly (without setup scripts)"
-[tasks."inspect-win_64_numpy2.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_numpy2.0.yaml"
-description = "List contents of mdtraj-feedstock packages built for variant win_64_numpy2.0"
+[tasks."build-linux_64_"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_.yaml"
+description = "Build mdtraj-feedstock with variant linux_64_ directly (without setup scripts)"
+[tasks."inspect-linux_64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_.yaml"
+description = "List contents of mdtraj-feedstock packages built for variant linux_64_"
+[tasks."build-osx_64_"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_.yaml"
+description = "Build mdtraj-feedstock with variant osx_64_ directly (without setup scripts)"
+[tasks."inspect-osx_64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_.yaml"
+description = "List contents of mdtraj-feedstock packages built for variant osx_64_"
+[tasks."build-osx_arm64_"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_.yaml"
+description = "Build mdtraj-feedstock with variant osx_arm64_ directly (without setup scripts)"
+[tasks."inspect-osx_arm64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_.yaml"
+description = "List contents of mdtraj-feedstock packages built for variant osx_arm64_"
+[tasks."build-win_64_"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_.yaml"
+description = "Build mdtraj-feedstock with variant win_64_ directly (without setup scripts)"
+[tasks."inspect-win_64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_.yaml"
+description = "List contents of mdtraj-feedstock packages built for variant win_64_"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
