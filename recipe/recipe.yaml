@@ -24,13 +24,11 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: cython =3
-    - if: build_platform != target_platform
-      then: numpy
+      then: 
+        - python
+        - cross-python_${{ target_platform }}
+        - cython =3
+        - numpy
     - ${{ compiler('c') }}
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
