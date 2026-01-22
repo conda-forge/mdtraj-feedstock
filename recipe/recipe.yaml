@@ -13,7 +13,7 @@ source:
   sha256: 70f3dbd9e492198be258a8a1a9c9c08f2482e9d05909f3a708892f4d3af238cf
 
 build:
-  number: 0
+  number: 1
   skip: match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
@@ -47,7 +47,7 @@ requirements:
     - packaging
     - numpy >=1.25.0
     - scipy
-    - pandas
+    - pandas <3
     - pyparsing
     - pytables
     - snappy
