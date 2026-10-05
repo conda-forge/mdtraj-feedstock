@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mdtraj
-  version: 1.11.1
+  version: 1.11.2
 
 package:
   name: mdtraj
@@ -10,11 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mdtraj/${{ name }}-${{ version }}.tar.gz
-  sha256: 70f3dbd9e492198be258a8a1a9c9c08f2482e9d05909f3a708892f4d3af238cf
+  sha256: 1e1b7ef725ade78fa7dcf0f8d1dcf89b6030847894bcae04e9e65f6af357843b
 
 build:
-  number: 2
-  skip: match(python, "<3.11")
+  number: 0
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
     entry_points:
@@ -28,7 +27,7 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
         - cython =3
-        - numpy <2.5
+        - numpy >=2.0, <3
     - ${{ compiler('c') }}
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
@@ -39,16 +38,16 @@ requirements:
     - setuptools
     - versioneer
     - cython =3
-    - numpy <2.5
+    - numpy >=2.0, <3
     - zlib
   run:
     - python
     - setuptools
     - packaging
-    - numpy >=1.25.0, <2.5
+    - numpy >=2.0, <3
     - scipy
-    - pandas <3
-    - pyparsing
+    - pandas
+    - pyparsing !=3.3.3
     - pytables
     - snappy
     - zlib
